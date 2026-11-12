@@ -1,0 +1,18 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "slugify-text"
+version = "0.1.0"
+description = "Convert text into URL-friendly slugs."
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.10"
+[project.scripts]
+slugify-text = "slugify_text.cli:main"
+[tool.setuptools]
+package-dir = {"" = "src"}
+[tool.setuptools.packages.find]
+where = ["src"]
+[tool.pytest.ini_options]
+pythonpath = ["src"]
